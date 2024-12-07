@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CatCSS Documentation</title>
+  <link rel="stylesheet" href="dist/catcss.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="navbar-logo">CatCSS</div>
+    <ul class="navbar-menu">
+      <li class="navbar-item"><a href="#getting-started">Getting Started</a></li>
+      <li class="navbar-item"><a href="#components">Components</a></li>
+      <li class="navbar-item"><a href="#customization">Customization</a></li>
+    </ul>
+  </header>
+
+  <main>
+    <section id="getting-started">
+      <h1>Getting Started</h1>
+      <p>CatCSS is a lightweight and modular CSS framework. Follow these steps to get started:</p>
+      <ol>
+        <li>Clone the repository or download the latest release.</li>
+        <li>Include the <code>dist/catcss.css</code> file in your project:</li>
+        <pre><code>&lt;link rel="stylesheet" href="dist/catcss.css"&gt;</code></pre>
+      </ol>
+    </section>
+
+    <section id="components">
+      <h1>Components</h1>
+      <h2>Buttons</h2>
+      <button class="btn btn-primary">Primary Button</button>
+      <button class="btn btn-secondary">Secondary Button</button>
+
+      <h2>Cards</h2>
+      <div class="card">
+        <div class="card-header">Card Title</div>
+        <div class="card-body">This is a card component.</div>
+        <div class="card-footer">Footer</div>
+      </div>
+
+      <h2>Modals</h2>
+      <button class="btn btn-primary" onclick="toggleModal()">Open Modal</button>
+      <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+          <div class="modal-header">Modal Title</div>
+          <div class="modal-body">This is a modal example.</div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" onclick="toggleModal()">Close</button>
+          </div>
+        </div>
+      </div>
+
+      <h2>Grid System</h2>
+      <div class="grid">
+        <div class="grid-col-4" style="background-color: var(--primary-color); color: white;">Col 4</div>
+        <div class="grid-col-4" style="background-color: var(--secondary-color); color: white;">Col 4</div>
+        <div class="grid-col-4" style="background-color: var(--success-color); color: white;">Col 4</div>
+      </div>
+    </section>
+
+    <section id="customization">
+      <h1>Customization</h1>
+      <p>CatCSS is fully customizable using CSS variables. You can override these variables in your own project:</p>
+      <pre><code>:root {
+  --primary-color: #ff0000;
+  --font-size-base: 18px;
+}</code></pre>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 CatCSS. Licensed under MIT.</p>
+  </footer>
+
+  <script>
+    function toggleModal() {
+      const overlay = document.getElementById('modalOverlay');
+      overlay.classList.toggle('show');
+    }
+  </script>
+</body>
+</html>
