@@ -1,0 +1,28 @@
+/* Badge */
+.badge {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 0.2rem 0.5rem;
+    color: #fff;
+    border-radius: 12px;
+    background-color: var(--primary-color);
+    text-align: center;
+  }
+  
+  .badge.success {
+    background-color: #28a745; /* Verde */
+  }
+  
+  .badge.warning {
+    background-color: #ffc107; /* Amarillo */
+  }
+  
+  .badge.danger {
+    background-color: #dc3545; /* Rojo */
+  }
+  
+  .badge.info {
+    background-color: #17a2b8; /* Azul */
+  }
+  

@@ -3,29 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CatCSS - Test Page</title>
+  <title>CatCSS Documentation</title>
   <link rel="stylesheet" href="dist/catcss.css">
 </head>
 <body>
-  <h1 style="color: var(--primary-color); font-size: var(--font-size-lg);">Welcome to CatCSS</h1>
+  <header class="docs-header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <img src="assets/logo.png" alt="CatCSS Logo">
+        </div>
+        <nav class="nav">
+          <a href="#getting-started">Getting Started</a>
+          <a href="#components">Components</a>
+          <a href="#customization">Customization</a>
+          <a href="#api">API Reference</a>
+        </nav>
+      </div>
+    </div>
+  </header>
 
-  <!-- Prueba de colores -->
-  <p style="color: var(--secondary-color);">This is a paragraph with secondary color.</p>
-  <p style="color: var(--success-color);">This is a paragraph with success color.</p>
+  <main class="docs-main">
+    <!-- Components Section -->
+    <section id="components" class="section">
+      <div class="container">
+        <h2>Components</h2>
+        <div class="info-grid">
+          <!-- Badge Component -->
+          <div>
+            <h3>Badge</h3>
+            <p>Use badges to highlight information.</p>
+            <span class="badge">Default</span>
+            <span class="badge success">Success</span>
+            <span class="badge warning">Warning</span>
+            <span class="badge danger">Danger</span>
+            <span class="badge info">Info</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-  <!-- Prueba de espaciados -->
-  <div style="margin: var(--spacing-lg); padding: var(--spacing-md); background-color: var(--light-color);">
-    This is a box with spacing variables.
-  </div>
-
-  <!-- Prueba de sombras -->
-  <div style="width: 200px; height: 100px; background-color: var(--background-color); box-shadow: var(--box-shadow-lg);">
-    Box with shadow
-  </div>
-
-  <!-- Prueba de bordes -->
-  <div style="width: 200px; height: 100px; background-color: var(--primary-color); border-radius: var(--border-radius-lg);">
-    Rounded box
-  </div>
+  <footer class="docs-footer">
+    <div class="container">
+      <p>&copy; 2024 CatCSS. Licensed under MIT.</p>
+    </div>
+  </footer>
 </body>
 </html>

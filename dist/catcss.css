@@ -236,334 +236,240 @@
     margin-left: 0.5rem;
   }
   
-/* Modals.css - Estilos para modales */
-
-/* Fondo del modal */
-.modal-overlay {
-    display: none; /* Oculto por defecto */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1000;
+/* Tooltips */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
   }
   
-  /* Contenedor del modal */
-  .modal {
-    display: block;
-    position: fixed;
-    top: 50%;
+  .tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .tooltip .tooltip-text {
+    visibility: hidden;
+    width: max-content;
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 4px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Ajuste de posición sobre el elemento */
     left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%;
-    max-width: 500px;
-    background-color: var(--light-color);
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 1001;
-    padding: 1rem;
-    animation: modal-fade-in 0.3s ease-in-out;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    font-size: 0.85rem;
   }
   
-  /* Encabezado del modal */
-  .modal-header {
-    font-size: 1.25rem;
+  .tooltip .tooltip-text::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: var(--primary-color) transparent transparent transparent;
+  }
+  
+/* Tabs */
+.tabs {
+    display: flex;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 1rem;
+  }
+  
+  .tabs .tab {
+    flex: 1;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--text-dark);
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-bottom: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .tabs .tab.active {
+    background-color: var(--primary-color);
+    color: #fff;
+    border-bottom: 2px solid var(--primary-color);
+  }
+  
+  .tabs .tab:hover {
+    background-color: #e6f7f5;
+  }
+  
+  .tab-content {
+    display: none;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+  }
+  
+  .tab-content.active {
+    display: block;
+  }
+  
+/* Accordion */
+.accordion {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .accordion-item {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .accordion-item:last-child {
+    border-bottom: none;
+  }
+  
+  .accordion-header {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .accordion-header:hover {
+    background-color: #e6f7f5;
+  }
+  
+  .accordion-header.active {
+    background-color: var(--primary-color);
+    color: #fff;
+  }
+  
+  .accordion-content {
+    display: none;
+    padding: 1rem;
+    background-color: #fff;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
+  .accordion-content.active {
+    display: block;
+  }
+  
+/* Form Styles */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  form label {
+    display: block;
+    font-size: 1rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
-    border-bottom: 1px solid var(--light-color);
-    padding-bottom: 0.5rem;
   }
   
-  /* Cuerpo del modal */
-  .modal-body {
-    font-size: 1rem;
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="password"],
+  form select,
+  form textarea {
+    width: 100%;
+    padding: 0.75rem;
     margin-bottom: 1rem;
-    color: var(--text-color);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
   }
   
-  /* Pie del modal */
-  .modal-footer {
-    display: flex;
-    justify-content: flex-end;
-    gap: 0.5rem;
-    border-top: 1px solid var(--light-color);
-    padding-top: 0.5rem;
+  form input[type="text"]:focus,
+  form input[type="email"]:focus,
+  form input[type="password"]:focus,
+  form select:focus,
+  form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(56, 182, 166, 0.5);
   }
   
-  /* Animaciones */
-  @keyframes modal-fade-in {
+  form input[type="checkbox"],
+  form input[type="radio"] {
+    margin-right: 0.5rem;
+  }
+  
+  form button {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  form button:hover {
+    background-color: #2a8e82;
+  }
+  
+/* Spinner */
+.spinner {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 4px solid var(--primary-color);
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
     from {
-      opacity: 0;
-      transform: translate(-50%, -55%);
+      transform: rotate(0deg);
     }
     to {
-      opacity: 1;
-      transform: translate(-50%, -50%);
+      transform: rotate(360deg);
     }
   }
   
-  /* Mostrar el modal */
-  .modal-overlay.show {
-    display: block;
-  }
-  
-/* Alerts.css - Estilos para alertas */
-
-/* Base */
-.alert {
-    padding: 1rem;
-    border-radius: 4px;
-    margin-bottom: 1rem;
-    font-size: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  
-  .alert-icon {
-    font-size: 1.25rem;
-  }
-  
-  .alert-close {
-    margin-left: auto;
-    font-size: 1.25rem;
-    cursor: pointer;
-    background: none;
-    border: none;
-  }
-  
-  /* Variantes */
-  .alert-success {
-    background-color: var(--success-color);
-    color: white;
-  }
-  
-  .alert-danger {
-    background-color: var(--danger-color);
-    color: white;
-  }
-  
-  .alert-warning {
-    background-color: var(--warning-color);
-    color: white;
-  }
-  
-  .alert-info {
-    background-color: var(--info-color);
-    color: white;
-  }
-  
-/* Lists.css - Estilos para listas */
-
-/* Estilo base para todas las listas */
-.list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .list-item {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 0;
-    border-bottom: 1px solid var(--light-color);
-  }
-  
-  /* Variantes de listas */
-  .list-bullet {
-    list-style: disc inside;
-    padding-left: 1.5rem;
-  }
-  
-  .list-numbered {
-    list-style: decimal inside;
-    padding-left: 1.5rem;
-  }
-  
-  /* Listas con íconos */
-  .list-icon .list-item {
-    gap: 1rem;
-  }
-  
-  .list-icon .list-item-icon {
-    font-size: 1.5rem;
-    color: var(--primary-color);
-  }
-  
-  /* Listas compactas */
-  .list-compact .list-item {
-    padding: 0.25rem 0;
-    font-size: 0.875rem;
-  }
-  
-  /* Listas horizontales */
-  .list-horizontal {
-    display: flex;
-    gap: 1rem;
-  }
-  
-  .list-horizontal .list-item {
-    border: none;
-  }
-  
-  /* Estados interactivos */
-  .list-item:hover {
-    background-color: var(--light-color);
-    cursor: pointer;
-  }
-  
-/* Navbar.css - Estilos para la barra de navegación */
-
-/* Contenedor de la navbar */
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.5rem 1rem;
+/* Badge */
+.badge {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 0.2rem 0.5rem;
+    color: #fff;
+    border-radius: 12px;
     background-color: var(--primary-color);
-    color: white;
-    position: relative;
-    z-index: 1000;
+    text-align: center;
   }
   
-  /* Logo */
-  .navbar-logo {
-    font-size: 1.5rem;
-    font-weight: bold;
+  .badge.success {
+    background-color: #28a745; /* Verde */
   }
   
-  /* Lista de navegación */
-  .navbar-menu {
-    display: flex;
-    gap: 1rem;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  .badge.warning {
+    background-color: #ffc107; /* Amarillo */
   }
   
-  .navbar-item {
-    cursor: pointer;
-    transition: color 0.2s ease-in-out;
+  .badge.danger {
+    background-color: #dc3545; /* Rojo */
   }
   
-  .navbar-item:hover {
-    color: var(--light-color);
-  }
-  
-  /* Botón hamburguesa para dispositivos móviles */
-  .navbar-toggle {
-    display: none;
-    font-size: 1.5rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: white;
-  }
-  
-  /* Navbar responsive */
-  @media (max-width: 768px) {
-    .navbar-menu {
-      display: none;
-      flex-direction: column;
-      background-color: var(--primary-color);
-      position: absolute;
-      top: 100%;
-      right: 0;
-      left: 0;
-      padding: 1rem;
-      gap: 0.5rem;
-    }
-  
-    .navbar-menu.show {
-      display: flex;
-    }
-  
-    .navbar-toggle {
-      display: block;
-    }
-  }
-  
-/* Grid.css - Sistema de grillas */
-
-/* Contenedor de la grilla */
-.grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem; /* Espaciado entre columnas */
-  }
-  
-  /* Columna básica */
-  .grid-col {
-    flex: 1 1 100%;
-  }
-  
-  /* Columnas de ancho personalizado */
-  .grid-col-1 { flex: 1 1 calc(8.33% - 1rem); }
-  .grid-col-2 { flex: 1 1 calc(16.66% - 1rem); }
-  .grid-col-3 { flex: 1 1 calc(25% - 1rem); }
-  .grid-col-4 { flex: 1 1 calc(33.33% - 1rem); }
-  .grid-col-5 { flex: 1 1 calc(41.66% - 1rem); }
-  .grid-col-6 { flex: 1 1 calc(50% - 1rem); }
-  .grid-col-7 { flex: 1 1 calc(58.33% - 1rem); }
-  .grid-col-8 { flex: 1 1 calc(66.66% - 1rem); }
-  .grid-col-9 { flex: 1 1 calc(75% - 1rem); }
-  .grid-col-10 { flex: 1 1 calc(83.33% - 1rem); }
-  .grid-col-11 { flex: 1 1 calc(91.66% - 1rem); }
-  .grid-col-12 { flex: 1 1 calc(100% - 1rem); }
-  
-  /* Alineación vertical */
-  .grid-align-top { align-items: flex-start; }
-  .grid-align-center { align-items: center; }
-  .grid-align-bottom { align-items: flex-end; }
-  
-  /* Distribución horizontal */
-  .grid-justify-start { justify-content: flex-start; }
-  .grid-justify-center { justify-content: center; }
-  .grid-justify-end { justify-content: flex-end; }
-  .grid-justify-space-between { justify-content: space-between; }
-  .grid-justify-space-around { justify-content: space-around; }
-  .grid-justify-space-evenly { justify-content: space-evenly; }
-  
-/* Breadcrumbs.css - Estilos para migas de pan */
-
-/* Contenedor principal */
-.breadcrumb {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 1rem;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  /* Elementos del breadcrumb */
-  .breadcrumb-item {
-    color: var(--text-color);
-  }
-  
-  .breadcrumb-item a {
-    text-decoration: none;
-    color: var(--primary-color);
-    transition: color 0.2s ease-in-out;
-  }
-  
-  .breadcrumb-item a:hover {
-    color: var(--dark-color);
-  }
-  
-  /* Separador entre los elementos */
-  .breadcrumb-separator {
-    color: var(--secondary-color);
-  }
-  
-  /* Último elemento (activo) */
-  .breadcrumb-item-active {
-    color: var(--dark-color);
-    font-weight: bold;
-    pointer-events: none;
+  .badge.info {
+    background-color: #17a2b8; /* Azul */
   }
   
