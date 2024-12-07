@@ -11,18 +11,19 @@
   <!-- Encabezado -->
   <header class="docs-header">
     <div class="container">
-      <div class="logo">
-        <img src="assets/logo.png" alt="CatCSS Logo">
+      <div class="header-content">
+        <div class="logo">
+          <img src="assets/logo.png" alt="CatCSS Logo">
+        </div>
+        <nav class="nav">
+          <a href="#getting-started">Getting Started</a>
+          <a href="#components">Components</a>
+          <a href="#customization">Customization</a>
+          <a href="#api">API Reference</a>
+        </nav>
       </div>
-      <nav class="nav">
-        <a href="#getting-started">Getting Started</a>
-        <a href="#components">Components</a>
-        <a href="#customization">Customization</a>
-        <a href="#api">API Reference</a>
-      </nav>
     </div>
   </header>
-
   <!-- Sección principal -->
   <main class="docs-main">
     <section class="hero">
@@ -45,24 +46,31 @@
 
     <!-- Getting Started -->
     <section id="getting-started" class="section">
-      <div class="container">
-        <h2>Getting Started</h2>
-        <div class="info-grid">
-          <div>
-            <h3>Clone the Repository</h3>
-            <p>Download the latest release or clone the repository to your local machine.</p>
-          </div>
-          <div>
-            <h3>Include CatCSS</h3>
-            <p>Add the <code>dist/catcss.css</code> file to your project and link it in your HTML file.</p>
-          </div>
-          <div>
-            <h3>Start Building</h3>
-            <p>Use CatCSS components to design your UI efficiently and with minimal effort.</p>
+        <div class="container">
+          <h2>Getting Started</h2>
+          <div class="info-grid">
+            <div>
+              <h3>Install via npm</h3>
+              <p>Install CatCSS using npm:</p>
+              <p class="code">npm install catcss</p>
+            </div>
+            <div>
+              <h3>Include CatCSS</h3>
+              <p>Add the following line to your HTML file to include CatCSS:</p>
+              <p class="code">
+                &lt;link rel="stylesheet"<br>
+                href="./node_modules/catcss/dist/catcss.css"&gt;
+              </p>
+            </div>
+            <div>
+              <h3>Start Building</h3>
+              <p>Use CatCSS components to design your UI efficiently and with minimal effort.</p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+      
+      
 
     <!-- Components -->
     <section id="components" class="section">

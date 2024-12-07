@@ -38,9 +38,7 @@ CatCSS is designed to be simple yet powerful, providing developers with a modula
 
 ## Installation
 
-### **CDN (Coming Soon)**
+You can install CatCSS using npm:
 
-You will be able to include CatCSS in your project via a CDN:
-
-```html
-<link rel="stylesheet" href="https://cdn.example.com/catcss.css">
+```bash
+npm install catcss

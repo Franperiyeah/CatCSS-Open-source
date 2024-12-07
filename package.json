@@ -1,0 +1,29 @@
+{
+  "name": "catcss",
+  "version": "1.0.0",
+  "description": "A lightwieght, modular, and customizable css framework.",
+  "main": "dist/catcss.css",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Franperiyeah/CatCSS-Open-source.git"
+  },
+  "keywords": [
+    "css",
+    "framework",
+    "responsive",
+    "modular",
+    "lightweight"
+  ],
+  "author": "Fran Santaclara",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Franperiyeah/CatCSS-Open-source/issues"
+  },
+  "homepage": "https://github.com/Franperiyeah/CatCSS-Open-source#readme"
+}
