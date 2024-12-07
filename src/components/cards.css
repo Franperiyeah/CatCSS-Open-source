@@ -1,0 +1,119 @@
+/* Cards.css - Estilos para tarjetas */
+
+/* Base de las tarjetas */
+.card {
+    display: block;
+    border-radius: 8px;
+    border: 1px solid var(--light-color);
+    background-color: var(--light-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Header, Body y Footer */
+  .card-header {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid var(--light-color);
+    padding-bottom: 0.5rem;
+  }
+  
+  .card-body {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+  }
+  
+  .card-footer {
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    text-align: right;
+    color: var(--dark-color);
+    border-top: 1px solid var(--light-color);
+    padding-top: 0.5rem;
+  }
+  
+  /* Tarjetas con imagen */
+  .card img {
+    width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Variantes de color */
+  .card-primary {
+    border-color: var(--primary-color);
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  .card-secondary {
+    border-color: var(--secondary-color);
+    background-color: var(--secondary-color);
+    color: white;
+  }
+  
+  .card-success {
+    border-color: var(--success-color);
+    background-color: var(--success-color);
+    color: white;
+  }
+  
+  .card-danger {
+    border-color: var(--danger-color);
+    background-color: var(--danger-color);
+    color: white;
+  }
+  
+  .card-warning {
+    border-color: var(--warning-color);
+    background-color: var(--warning-color);
+    color: white;
+  }
+  
+  .card-info {
+    border-color: var(--info-color);
+    background-color: var(--info-color);
+    color: white;
+  }
+  
+  /* Tarjetas compactas */
+  .card-compact {
+    padding: 0.5rem;
+    font-size: 0.875rem;
+  }
+  
+  /* Tarjetas con texto centrado */
+  .card-centered {
+    text-align: center;
+  }
+  
+  /* Tarjetas en filas (usando flexbox) */
+  .card-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .card-row .card {
+    flex: 1 1 calc(33.333% - 1rem);
+  }
+  
+  /* Tarjetas con botones */
+  .card .card-actions {
+    margin-top: 1rem;
+    text-align: right;
+  }
+  
+  .card .card-actions .btn {
+    margin-left: 0.5rem;
+  }
+  

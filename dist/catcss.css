@@ -1,0 +1,569 @@
+/* Reset.css - Normaliza estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+/* Colors.css - Variables de color y más */
+
+/* Paleta de colores */
+:root {
+  --primary-color: #9ecaff; /* Azul pastel */
+  --secondary-color: #a8b6c8; /* Gris pastel */
+  --success-color: #a9dfbf; /* Verde pastel */
+  --danger-color: #f5b7b1; /* Rojo pastel */
+  --warning-color: #f8d58a; /* Amarillo pastel */
+  --info-color: #a4ddee; /* Celeste pastel */
+  --light-color: #f8f9fa; /* Muy claro */
+  --dark-color: #6d757d; /* Gris oscuro suave */
+  --background-color: #ffffff; /* Fondo blanco */
+  --text-color: #4a4a4a; /* Gris neutro para texto */
+
+  /* Colores adicionales */
+  --muted-color: #e0e0e0; /* Gris claro para elementos secundarios */
+  --highlight-color: #ffedcc; /* Amarillo claro para resaltar */
+  --shadow-color: rgba(0, 0, 0, 0.1); /* Color base para sombras */
+
+  /* Tipografía */
+  --font-family: "Arial", sans-serif;
+  --font-size-base: 16px;
+  --font-size-sm: 14px;
+  --font-size-lg: 18px;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  /* Espaciados */
+  --spacing-xs: 0.25rem; /* 4px */
+  --spacing-sm: 0.5rem; /* 8px */
+  --spacing-md: 1rem; /* 16px */
+  --spacing-lg: 1.5rem; /* 24px */
+  --spacing-xl: 2rem; /* 32px */
+
+  /* Bordes */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  --border-width: 1px;
+  --border-color: var(--muted-color);
+
+  /* Sombras */
+  --box-shadow-sm: 0 2px 4px var(--shadow-color);
+  --box-shadow-md: 0 4px 6px var(--shadow-color);
+  --box-shadow-lg: 0 6px 8px var(--shadow-color);
+
+  /* Transiciones */
+  --transition-fast: 0.2s ease-in-out;
+  --transition-medium: 0.3s ease-in-out;
+  --transition-slow: 0.5s ease-in-out;
+
+  /* Breakpoints */
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+}
+/* Buttons.css - Estilos para botones */
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  .btn-secondary {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #495057;
+  }
+  
+/* Cards.css - Estilos para tarjetas */
+
+/* Base de las tarjetas */
+.card {
+    display: block;
+    border-radius: 8px;
+    border: 1px solid var(--light-color);
+    background-color: var(--light-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Header, Body y Footer */
+  .card-header {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid var(--light-color);
+    padding-bottom: 0.5rem;
+  }
+  
+  .card-body {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+  }
+  
+  .card-footer {
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    text-align: right;
+    color: var(--dark-color);
+    border-top: 1px solid var(--light-color);
+    padding-top: 0.5rem;
+  }
+  
+  /* Tarjetas con imagen */
+  .card img {
+    width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Variantes de color */
+  .card-primary {
+    border-color: var(--primary-color);
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  .card-secondary {
+    border-color: var(--secondary-color);
+    background-color: var(--secondary-color);
+    color: white;
+  }
+  
+  .card-success {
+    border-color: var(--success-color);
+    background-color: var(--success-color);
+    color: white;
+  }
+  
+  .card-danger {
+    border-color: var(--danger-color);
+    background-color: var(--danger-color);
+    color: white;
+  }
+  
+  .card-warning {
+    border-color: var(--warning-color);
+    background-color: var(--warning-color);
+    color: white;
+  }
+  
+  .card-info {
+    border-color: var(--info-color);
+    background-color: var(--info-color);
+    color: white;
+  }
+  
+  /* Tarjetas compactas */
+  .card-compact {
+    padding: 0.5rem;
+    font-size: 0.875rem;
+  }
+  
+  /* Tarjetas con texto centrado */
+  .card-centered {
+    text-align: center;
+  }
+  
+  /* Tarjetas en filas (usando flexbox) */
+  .card-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .card-row .card {
+    flex: 1 1 calc(33.333% - 1rem);
+  }
+  
+  /* Tarjetas con botones */
+  .card .card-actions {
+    margin-top: 1rem;
+    text-align: right;
+  }
+  
+  .card .card-actions .btn {
+    margin-left: 0.5rem;
+  }
+  
+/* Modals.css - Estilos para modales */
+
+/* Fondo del modal */
+.modal-overlay {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+  
+  /* Contenedor del modal */
+  .modal {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 500px;
+    background-color: var(--light-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+    padding: 1rem;
+    animation: modal-fade-in 0.3s ease-in-out;
+  }
+  
+  /* Encabezado del modal */
+  .modal-header {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid var(--light-color);
+    padding-bottom: 0.5rem;
+  }
+  
+  /* Cuerpo del modal */
+  .modal-body {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+  }
+  
+  /* Pie del modal */
+  .modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    border-top: 1px solid var(--light-color);
+    padding-top: 0.5rem;
+  }
+  
+  /* Animaciones */
+  @keyframes modal-fade-in {
+    from {
+      opacity: 0;
+      transform: translate(-50%, -55%);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+  }
+  
+  /* Mostrar el modal */
+  .modal-overlay.show {
+    display: block;
+  }
+  
+/* Alerts.css - Estilos para alertas */
+
+/* Base */
+.alert {
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .alert-icon {
+    font-size: 1.25rem;
+  }
+  
+  .alert-close {
+    margin-left: auto;
+    font-size: 1.25rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+  }
+  
+  /* Variantes */
+  .alert-success {
+    background-color: var(--success-color);
+    color: white;
+  }
+  
+  .alert-danger {
+    background-color: var(--danger-color);
+    color: white;
+  }
+  
+  .alert-warning {
+    background-color: var(--warning-color);
+    color: white;
+  }
+  
+  .alert-info {
+    background-color: var(--info-color);
+    color: white;
+  }
+  
+/* Lists.css - Estilos para listas */
+
+/* Estilo base para todas las listas */
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .list-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--light-color);
+  }
+  
+  /* Variantes de listas */
+  .list-bullet {
+    list-style: disc inside;
+    padding-left: 1.5rem;
+  }
+  
+  .list-numbered {
+    list-style: decimal inside;
+    padding-left: 1.5rem;
+  }
+  
+  /* Listas con íconos */
+  .list-icon .list-item {
+    gap: 1rem;
+  }
+  
+  .list-icon .list-item-icon {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+  }
+  
+  /* Listas compactas */
+  .list-compact .list-item {
+    padding: 0.25rem 0;
+    font-size: 0.875rem;
+  }
+  
+  /* Listas horizontales */
+  .list-horizontal {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .list-horizontal .list-item {
+    border: none;
+  }
+  
+  /* Estados interactivos */
+  .list-item:hover {
+    background-color: var(--light-color);
+    cursor: pointer;
+  }
+  
+/* Navbar.css - Estilos para la barra de navegación */
+
+/* Contenedor de la navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    position: relative;
+    z-index: 1000;
+  }
+  
+  /* Logo */
+  .navbar-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  /* Lista de navegación */
+  .navbar-menu {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-item {
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .navbar-item:hover {
+    color: var(--light-color);
+  }
+  
+  /* Botón hamburguesa para dispositivos móviles */
+  .navbar-toggle {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+  }
+  
+  /* Navbar responsive */
+  @media (max-width: 768px) {
+    .navbar-menu {
+      display: none;
+      flex-direction: column;
+      background-color: var(--primary-color);
+      position: absolute;
+      top: 100%;
+      right: 0;
+      left: 0;
+      padding: 1rem;
+      gap: 0.5rem;
+    }
+  
+    .navbar-menu.show {
+      display: flex;
+    }
+  
+    .navbar-toggle {
+      display: block;
+    }
+  }
+  
+/* Grid.css - Sistema de grillas */
+
+/* Contenedor de la grilla */
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; /* Espaciado entre columnas */
+  }
+  
+  /* Columna básica */
+  .grid-col {
+    flex: 1 1 100%;
+  }
+  
+  /* Columnas de ancho personalizado */
+  .grid-col-1 { flex: 1 1 calc(8.33% - 1rem); }
+  .grid-col-2 { flex: 1 1 calc(16.66% - 1rem); }
+  .grid-col-3 { flex: 1 1 calc(25% - 1rem); }
+  .grid-col-4 { flex: 1 1 calc(33.33% - 1rem); }
+  .grid-col-5 { flex: 1 1 calc(41.66% - 1rem); }
+  .grid-col-6 { flex: 1 1 calc(50% - 1rem); }
+  .grid-col-7 { flex: 1 1 calc(58.33% - 1rem); }
+  .grid-col-8 { flex: 1 1 calc(66.66% - 1rem); }
+  .grid-col-9 { flex: 1 1 calc(75% - 1rem); }
+  .grid-col-10 { flex: 1 1 calc(83.33% - 1rem); }
+  .grid-col-11 { flex: 1 1 calc(91.66% - 1rem); }
+  .grid-col-12 { flex: 1 1 calc(100% - 1rem); }
+  
+  /* Alineación vertical */
+  .grid-align-top { align-items: flex-start; }
+  .grid-align-center { align-items: center; }
+  .grid-align-bottom { align-items: flex-end; }
+  
+  /* Distribución horizontal */
+  .grid-justify-start { justify-content: flex-start; }
+  .grid-justify-center { justify-content: center; }
+  .grid-justify-end { justify-content: flex-end; }
+  .grid-justify-space-between { justify-content: space-between; }
+  .grid-justify-space-around { justify-content: space-around; }
+  .grid-justify-space-evenly { justify-content: space-evenly; }
+  
+/* Breadcrumbs.css - Estilos para migas de pan */
+
+/* Contenedor principal */
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Elementos del breadcrumb */
+  .breadcrumb-item {
+    color: var(--text-color);
+  }
+  
+  .breadcrumb-item a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .breadcrumb-item a:hover {
+    color: var(--dark-color);
+  }
+  
+  /* Separador entre los elementos */
+  .breadcrumb-separator {
+    color: var(--secondary-color);
+  }
+  
+  /* Último elemento (activo) */
+  .breadcrumb-item-active {
+    color: var(--dark-color);
+    font-weight: bold;
+    pointer-events: none;
+  }
+  

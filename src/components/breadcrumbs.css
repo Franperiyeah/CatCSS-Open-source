@@ -1,0 +1,40 @@
+/* Breadcrumbs.css - Estilos para migas de pan */
+
+/* Contenedor principal */
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Elementos del breadcrumb */
+  .breadcrumb-item {
+    color: var(--text-color);
+  }
+  
+  .breadcrumb-item a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .breadcrumb-item a:hover {
+    color: var(--dark-color);
+  }
+  
+  /* Separador entre los elementos */
+  .breadcrumb-separator {
+    color: var(--secondary-color);
+  }
+  
+  /* Último elemento (activo) */
+  .breadcrumb-item-active {
+    color: var(--dark-color);
+    font-weight: bold;
+    pointer-events: none;
+  }
+  

@@ -1,0 +1,60 @@
+/* Lists.css - Estilos para listas */
+
+/* Estilo base para todas las listas */
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .list-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--light-color);
+  }
+  
+  /* Variantes de listas */
+  .list-bullet {
+    list-style: disc inside;
+    padding-left: 1.5rem;
+  }
+  
+  .list-numbered {
+    list-style: decimal inside;
+    padding-left: 1.5rem;
+  }
+  
+  /* Listas con íconos */
+  .list-icon .list-item {
+    gap: 1rem;
+  }
+  
+  .list-icon .list-item-icon {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+  }
+  
+  /* Listas compactas */
+  .list-compact .list-item {
+    padding: 0.25rem 0;
+    font-size: 0.875rem;
+  }
+  
+  /* Listas horizontales */
+  .list-horizontal {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .list-horizontal .list-item {
+    border: none;
+  }
+  
+  /* Estados interactivos */
+  .list-item:hover {
+    background-color: var(--light-color);
+    cursor: pointer;
+  }
+  
