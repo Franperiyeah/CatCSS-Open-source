@@ -4,82 +4,101 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CatCSS Documentation</title>
-  <link rel="stylesheet" href="dist/catcss.css">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles/catcss.css">
+  <link rel="stylesheet" href="styles/docs.css">
 </head>
 <body>
-  <header class="navbar">
-    <div class="navbar-logo">CatCSS</div>
-    <ul class="navbar-menu">
-      <li class="navbar-item"><a href="#getting-started">Getting Started</a></li>
-      <li class="navbar-item"><a href="#components">Components</a></li>
-      <li class="navbar-item"><a href="#customization">Customization</a></li>
-    </ul>
+  <!-- Encabezado -->
+  <header class="docs-header">
+    <div class="container">
+      <div class="logo">
+        <img src="assets/logo.png" alt="CatCSS Logo">
+      </div>
+      <nav class="nav">
+        <a href="#getting-started">Getting Started</a>
+        <a href="#components">Components</a>
+        <a href="#customization">Customization</a>
+        <a href="#api">API Reference</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section id="getting-started">
-      <h1>Getting Started</h1>
-      <p>CatCSS is a lightweight and modular CSS framework. Follow these steps to get started:</p>
-      <ol>
-        <li>Clone the repository or download the latest release.</li>
-        <li>Include the <code>dist/catcss.css</code> file in your project:</li>
-        <pre><code>&lt;link rel="stylesheet" href="dist/catcss.css"&gt;</code></pre>
-      </ol>
+  <!-- Sección principal -->
+  <main class="docs-main">
+    <section class="hero">
+      <div class="container">
+        <h1>CatCSS Documentation</h1>
+        <p>A lightweight, modular, and customizable CSS framework to build modern web interfaces.</p>
+        <div class="hero-buttons">
+          <a href="#getting-started" class="btn btn-primary">Get Started →</a>
+          <a href="#components" class="btn btn-secondary">Try CatCSS →</a>
+        </div>
+      </div>
     </section>
 
-    <section id="components">
-      <h1>Components</h1>
-      <h2>Buttons</h2>
-      <button class="btn btn-primary">Primary Button</button>
-      <button class="btn btn-secondary">Secondary Button</button>
-
-      <h2>Cards</h2>
-      <div class="card">
-        <div class="card-header">Card Title</div>
-        <div class="card-body">This is a card component.</div>
-        <div class="card-footer">Footer</div>
+    <!-- Bloque de información -->
+    <section class="announcement">
+      <div class="container">
+        <p>CatCSS 2.0 is out now! Learn about <a href="#changelog">what's changed</a> in the release.</p>
       </div>
+    </section>
 
-      <h2>Modals</h2>
-      <button class="btn btn-primary" onclick="toggleModal()">Open Modal</button>
-      <div class="modal-overlay" id="modalOverlay">
-        <div class="modal">
-          <div class="modal-header">Modal Title</div>
-          <div class="modal-body">This is a modal example.</div>
-          <div class="modal-footer">
-            <button class="btn btn-secondary" onclick="toggleModal()">Close</button>
+    <!-- Getting Started -->
+    <section id="getting-started" class="section">
+      <div class="container">
+        <h2>Getting Started</h2>
+        <div class="info-grid">
+          <div>
+            <h3>Clone the Repository</h3>
+            <p>Download the latest release or clone the repository to your local machine.</p>
+          </div>
+          <div>
+            <h3>Include CatCSS</h3>
+            <p>Add the <code>dist/catcss.css</code> file to your project and link it in your HTML file.</p>
+          </div>
+          <div>
+            <h3>Start Building</h3>
+            <p>Use CatCSS components to design your UI efficiently and with minimal effort.</p>
           </div>
         </div>
       </div>
-
-      <h2>Grid System</h2>
-      <div class="grid">
-        <div class="grid-col-4" style="background-color: var(--primary-color); color: white;">Col 4</div>
-        <div class="grid-col-4" style="background-color: var(--secondary-color); color: white;">Col 4</div>
-        <div class="grid-col-4" style="background-color: var(--success-color); color: white;">Col 4</div>
-      </div>
     </section>
 
-    <section id="customization">
-      <h1>Customization</h1>
-      <p>CatCSS is fully customizable using CSS variables. You can override these variables in your own project:</p>
-      <pre><code>:root {
-  --primary-color: #ff0000;
-  --font-size-base: 18px;
-}</code></pre>
+    <!-- Components -->
+    <section id="components" class="section">
+      <div class="container">
+        <h2>Components</h2>
+        <div class="info-grid">
+          <div>
+            <h3>Buttons</h3>
+            <p>Fully customizable buttons with hover effects and variants.</p>
+            <a href="#buttons">Learn More →</a>
+          </div>
+          <div>
+            <h3>Cards</h3>
+            <p>Modular card layouts with header, body, and footer options.</p>
+            <a href="#cards">Learn More →</a>
+          </div>
+          <div>
+            <h3>Modals</h3>
+            <p>Accessible and animated modal dialogs for your projects.</p>
+            <a href="#modals">Learn More →</a>
+          </div>
+          <div>
+            <h3>Grid System</h3>
+            <p>A 12-column responsive grid system with alignment utilities.</p>
+            <a href="#grid">Learn More →</a>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2024 CatCSS. Licensed under MIT.</p>
+  <!-- Pie de página -->
+  <footer class="docs-footer">
+    <div class="container">
+      <p>&copy; 2024 CatCSS. Licensed under MIT.</p>
+    </div>
   </footer>
-
-  <script>
-    function toggleModal() {
-      const overlay = document.getElementById('modalOverlay');
-      overlay.classList.toggle('show');
-    }
-  </script>
 </body>
 </html>
